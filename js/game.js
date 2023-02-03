@@ -5,10 +5,5 @@ function createBoard() {
   }
   createBoard()
   
-//   function gameLoop() {
-//     startGame();
-//     requestAnimationFrame(gameLoop);
-//   }
-  
-//   requestAnimationFrame(gameLoop);
+
   

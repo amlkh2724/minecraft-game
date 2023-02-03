@@ -10,15 +10,19 @@ export function createBoard() {
             getDirt(cell, i);
             getGrass(cell, i);
             buildTree(cell, i, j)
-            renderStone(cell,i,j)
+            renderStone(cell, i, j)
             buildBoard.appendChild(cell);
         }
     }
 }
-function renderStone(cell,i,j){
-    if (i < 15 && i > 11 && j > 6 && j < 15){
+// buildBoard.addEventListener("click",(e)=> {
+//     e.target.classList.add("blue")
+
+// })
+function renderStone(cell, i, j) {
+    if (i < 15 && i > 11 && j > 6 && j < 15) {
         cell.classList.remove("sky")
-        cell.classList.add("rockk")
+        cell.classList.add("rock")
     }
 
 }
@@ -26,7 +30,7 @@ function renderStone(cell,i,j){
 function buildTree(cell, i, j) {
     if (i < 15 && i > 10 && j > 16 && j < 18) {
         cell.classList.remove("sky")
-        cell.classList.add("trunkk")
+        cell.classList.add("trunk")
     }
     if (
         (i < 11 && i > 7 && j > 15 && j < 19) ||
@@ -41,16 +45,15 @@ function buildTree(cell, i, j) {
     }
 }
 
-
 function getGrass(cell, i) {
     if (i === 15) {
         cell.classList.remove("sky")
-        cell.classList.add("grasss")
+        cell.classList.add("grass")
     }
 }
 function getDirt(cell, i) {
     if (i > 15) {
         cell.classList.remove("sky");
-        cell.classList.add("dirtt");
+        cell.classList.add("dirt");
     }
 }

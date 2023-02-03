@@ -8,8 +8,9 @@ body {
 }
 
 #game-board {
+  background-color: skyblue;
+
   margin: 0 auto;
-  /* background-color: #ccc; */
   border-left: 1px dotted rgb(61, 28, 13);
   border-right: 1px dotted rgb(61, 28, 13);
   width: 130vmin;
@@ -18,65 +19,49 @@ body {
   grid-template-rows: repeat(21, 1fr);
   grid-template-columns: repeat(21, 1fr);
 }
-.sky{
-    background-color: skyblue;
+
+.sky {
+  background-color: skyblue;
 
 }
-.dirtt{
-  background: url("/assest/dirt.jpg") no-repeat center center/cover;
-}
+
 .dirt {
   background: url("/assest/dirt.jpg") no-repeat center center/cover;
-  width: 3rem;
-  height: 3rem;
-}
-.grasss{
-  background: url("/assest/grass.jpg")no-repeat center center/cover;
 
 }
+
 .grass {
   background: url("/assest/grass.jpg")no-repeat center center/cover;
-  width: 3rem;
-  height: 3rem;
-}
-.rockk{
-  background: url("/assest/rock.jpg")no-repeat center center/cover;
 
 }
+
 .rock {
   background: url("/assest/rock.jpg")no-repeat center center/cover;
-  width: 3rem;
-  height: 3rem;
-}
-.treee{
-  background: url("/assest/tree.jpg")no-repeat center center/cover;
 
 }
+
 .tree {
   background: url("/assest/tree.jpg")no-repeat center center/cover;
-  width: 3rem;
-  height: 3rem;
+
 }
-.snoww{
+
+.snoww {
   background: url("/assest/snow.jpg")no-repeat center center/cover;
 
 }
+
 .snow {
   background: url("/assest/snow.jpg")no-repeat center center/cover;
-  width: 3rem;
-  height: 3rem;
+
 }
-.trunkk{
+
+.trunk {
   background: url("/assest/trunk.jpg")no-repeat center center/cover;
 
 }
-.trunk {
-  background: url("/assest/trunk.jpg")no-repeat center center/cover;
-  width: 3rem;
-  height: 3rem;
-}
-.leaves{
-  background: url(/assest/leaves.png)no-repeat center center/cover;
+
+.leaves {
+  background: url("/assest/leaves.png")no-repeat center center/cover;
 }
 
 
@@ -120,13 +105,13 @@ body {
 }
 
 .shovel {
-  background: url(/assest/shovel.png) no-repeat center center/cover;
+  background: url("/assest/shovel.png") no-repeat center center/cover;
   width: 3rem;
   height: 3rem;
 }
 
 .axe {
-  background: url(/assest/axe.png) no-repeat center center/cover;
+  background: url("/assest/axe.png") no-repeat center center/cover;
   width: 3rem;
   height: 3rem;
 }
@@ -138,10 +123,11 @@ body {
   grid-column-gap: 0px;
   grid-row-gap: 0px;
 }
-.container1{
+
+.container1 {
   margin-top: 1rem;
   margin-left: 1rem;
-  
+
   width: 3rem;
   height: 3rem;
   border: 1px solid black;
