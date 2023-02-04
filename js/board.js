@@ -15,10 +15,7 @@ export function createBoard() {
         }
     }
 }
-// buildBoard.addEventListener("click",(e)=> {
-//     e.target.classList.add("blue")
 
-// })
 function renderStone(cell, i, j) {
     if (i < 15 && i > 11 && j > 6 && j < 15) {
         cell.classList.remove("sky")

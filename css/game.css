@@ -93,7 +93,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 8rem;
+  width: 6rem;
   height: 7rem;
   border: 1px gray solid;
 }
@@ -125,10 +125,17 @@ body {
 }
 
 .container1 {
+  text-align: center;
   margin-top: 1rem;
   margin-left: 1rem;
-
   width: 3rem;
-  height: 3rem;
   border: 1px solid black;
 }
+.red{
+  color: red;
+}
+
+.green{
+  color: green;
+}
+/* @media */
