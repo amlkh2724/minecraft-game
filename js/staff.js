@@ -17,6 +17,8 @@ const getRock = document.querySelector(".currentRock")
 const getSnow = document.querySelector(".currentSnow")
 const getTrunk = document.querySelector(".currentTrunk")
 const getLeaves = document.querySelector(".currentLeaves")
+const swordaaa = document.querySelector(".containerSword")
+const sword1 = document.querySelector(".sword")
 
 counterDirt.classList.add("red")
 counterGrass.classList.add("red")
@@ -24,7 +26,9 @@ counterRock.classList.add("red")
 counterSnow.classList.add("red")
 counterTrunk.classList.add("red")
 counterLeaves.classList.add("red")
-
+function restartGame() {
+    location.href = "./index.html";
+}
 
 function restartColors() {
     counterDirt.classList.remove("green");
@@ -73,16 +77,25 @@ let counterDirt2 = 0;
 let counterGras3 = 0;
 let counterLeaves4 = 0;
 let counterTrunk5 = 0;
+let counterSnow6 = 0
 
 buildBoard.addEventListener("click", (e) => {
     const target = e.target
-
+    if (swordaaa.classList.contains("blue")) {
+        target.classList = "";
+    }
     if (pickaxe.classList.contains("blue")) {
         counterDirt.classList.add("red")
         if (target.classList.contains("rock")) {
             counterRock1++;
             counterRock.innerHTML = counterRock1;
             target.classList.remove("rock");
+        }
+        if (target.classList.contains("snow")) {
+            counterSnow6++
+            counterSnow.innerHTML = counterSnow6
+            target.classList.remove("snow")
+
         }
     }
     if (shovel.classList.contains("blue")) {
@@ -165,8 +178,14 @@ buildBoard.addEventListener("click", (e) => {
     }
 
 });
-
+swordaaa.addEventListener("click", (e) => {
+    swordaaa.classList.add("blue")
+    restartBlurColor()
+    restartColors()
+})
 pickaxeClick.addEventListener("click", (e) => {
+    swordaaa.classList.remove("blue")
+
     pickaxe.classList.add("blue");
     restartColors()
     axe.classList.remove("blue");
@@ -174,6 +193,8 @@ pickaxeClick.addEventListener("click", (e) => {
 });
 
 axeClick.addEventListener("click", (e) => {
+    swordaaa.classList.remove("blue")
+
     axe.classList.add("blue");
     restartColors()
     pickaxe.classList.remove("blue");
@@ -181,6 +202,8 @@ axeClick.addEventListener("click", (e) => {
 });
 
 shovelClick.addEventListener("click", (e) => {
+    swordaaa.classList.remove("blue")
+
     shovel.classList.add("blue");
     restartColors()
     pickaxe.classList.remove("blue");
@@ -188,6 +211,8 @@ shovelClick.addEventListener("click", (e) => {
 });
 
 getDirt.addEventListener("click", () => {
+    swordaaa.classList.remove("blue")
+
 
     counterDirt.classList.add("green")
     restartBlurColor()
@@ -199,6 +224,8 @@ getDirt.addEventListener("click", () => {
 
 })
 getTrunk.addEventListener("click", () => {
+    swordaaa.classList.remove("blue")
+
     counterDirt.classList.remove("green")
     counterGrass.classList.remove("green")
     counterRock.classList.remove("green")
@@ -210,6 +237,8 @@ getTrunk.addEventListener("click", () => {
 })
 
 getRock.addEventListener("click", () => {
+    swordaaa.classList.remove("blue")
+
     counterDirt.classList.remove("green")
     counterGrass.classList.remove("green")
     counterRock.classList.add("green")
@@ -220,6 +249,8 @@ getRock.addEventListener("click", () => {
 })
 
 getLeaves.addEventListener("click", () => {
+    swordaaa.classList.remove("blue")
+
     counterDirt.classList.remove("green")
     counterGrass.classList.remove("green")
     counterRock.classList.remove("green")
@@ -231,6 +262,8 @@ getLeaves.addEventListener("click", () => {
 })
 
 getGrass.addEventListener("click", () => {
+    swordaaa.classList.remove("blue")
+
     counterDirt.classList.remove("green")
     counterGrass.classList.add("green")
     restartBlurColor()
@@ -242,6 +275,8 @@ getGrass.addEventListener("click", () => {
 })
 
 getSnow.addEventListener("click", () => {
+    swordaaa.classList.remove("blue")
+
     counterDirt.classList.remove("green")
     counterGrass.classList.remove("green")
     counterRock.classList.remove("green")

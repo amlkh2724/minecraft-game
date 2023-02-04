@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,9 +8,14 @@
     <title>hello</title>
     <link rel="stylesheet" href="./css/game.css">
 </head>
+
 <body>
     <div id="game-board"></div>
+    <div class="containerSword">
+        <div class="sword"></div>
+    </div>
     <div class="allTheTools">
+
         <div class="container" id="pickaxe">
             <div class="picaxe"></div>
             <div class="name">pickaxe</div>
@@ -25,11 +31,11 @@
         </div>
         <div class="inventory">
             <div class="container1">
-                <div class="dirt currentDirt counterDirt">0</div>            
+                <div class="dirt currentDirt counterDirt">0</div>
             </div>
             <div class="container1">
                 <div class="grass currentGrass counter1">0</div>
-                
+
             </div>
             <div class="container1">
                 <div class="rock currentRock counter2">0</div>
@@ -44,10 +50,10 @@
                 <div class="leaves currentLeaves counter5">0</div>
             </div>
         </div>
-        <button>restart</button>
+        <button class="buttondes" onclick="restartGame()">restart</button>
     </div>
     <script src="./js/game.js" defer type="module"></script>
     <script src="./js/staff.js" defer></script>
 </body>
-</html>
 
+</html>
