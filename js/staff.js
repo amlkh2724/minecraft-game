@@ -26,6 +26,21 @@ counterTrunk.classList.add("red")
 counterLeaves.classList.add("red")
 
 
+function restartColors() {
+    counterDirt.classList.remove("green");
+    counterGrass.classList.remove("green");
+    counterRock.classList.remove("green");
+    counterSnow.classList.remove("green");
+    counterTrunk.classList.remove("green");
+    counterLeaves.classList.remove("green");
+}
+
+
+function restartBlurColor() {
+    pickaxe.classList.remove("blue");
+    shovel.classList.remove("blue");
+    axe.classList.remove("blue");
+}
 
 let counter = 0
 class allTheStaff {
@@ -150,19 +165,6 @@ buildBoard.addEventListener("click", (e) => {
     }
 
 });
-function restartColors() {
-    counterDirt.classList.remove("green");
-    counterGrass.classList.remove("green");
-    counterRock.classList.remove("green");
-    counterSnow.classList.remove("green");
-    counterTrunk.classList.remove("green");
-    counterLeaves.classList.remove("green");
-}
-function restartBlurColor() {
-    pickaxe.classList.remove("blue");
-    shovel.classList.remove("blue");
-    axe.classList.remove("blue");
-}
 
 pickaxeClick.addEventListener("click", (e) => {
     pickaxe.classList.add("blue");

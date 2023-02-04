@@ -1,4 +1,3 @@
-
 const buildBoard = document.querySelector("#game-board");
 const matrixSize = 21;
 
@@ -15,29 +14,60 @@ export function createBoard() {
         }
     }
 }
-
 function renderStone(cell, i, j) {
-    if (i < 15 && i > 11 && j > 6 && j < 15) {
-        cell.classList.remove("sky")
-        cell.classList.add("rock")
+    if ((i < 15 && i > 1 && j > 4 && j < 6) || (i < 2 && i > 0 && j > 4 && j < 15) || (i < 15 && i > 1 && j < 15 && j > 13)) {
+        cell.classList.remove("sky");
+        cell.classList.add("rock");
+
     }
+    if (!cell.classList.contains("legs") && !cell.classList.contains("arms") && !cell.classList.contains("body") && !cell.classList.contains("afterheads") && !cell.classList.contains("goldenhead")) {
+        if (i >= 2 && i <= 14 && j >= 6 && j <= 13) {
+            if (i !== 4 || (j < 8 || j > 10)) {
+                cell.classList.add("snow");
+            }
+        }
+    }
+
+    if ((i < 15 && i > 9 && j > 7 && j < 9) || (i < 15 && i > 9 && j > 10 && j < 12)) {
+        cell.classList.remove("sky");
+        cell.classList.add("legs");
+    }
+    if (i < 10 && i > 4 && j > 6 && j < 13) {
+        cell.classList.remove("sky");
+        cell.classList.add("body");
+    }
+    if (i === 4 && j < 13 && j > 6) {
+        cell.classList.remove("sky");
+        cell.classList.add("afterheads");
+    }
+    if (i === 3 && j < 11 && j > 8) {
+        cell.classList.remove("sky");
+        cell.classList.add("goldenhead");
+    }
+    if ((i < 11 && i > 3 && j > 5 && j < 7) || (i < 15 && i > 9 && j > 10 && j < 12)) {
+        cell.classList.remove("sky");
+        cell.classList.add("arms");
+    }
+    if ((i < 11 && i > 3 && j > 12 && j < 14) || (i < 15 && i > 9 && j > 10 && j < 12)) {
+        cell.classList.remove("sky");
+        cell.classList.add("arms");
+    }
+
 
 }
 
+
 function buildTree(cell, i, j) {
-    if (i < 15 && i > 10 && j > 16 && j < 18) {
+    if ((i < 15 && i > 10 && j > 16 && j < 18) || (i < 15 && i > 10 && j > 1 && j < 3)) {
         cell.classList.remove("sky")
         cell.classList.add("trunk")
     }
     if (
-        (i < 11 && i > 7 && j > 15 && j < 19) ||
-        (i < 15 && i > 11 && j > 2 && j < 6)
-
+        (i < 11 && i > 7 && j > 15 && j < 19) || (i < 11 && i > 7 && j > 0 && j < 4)
 
     ) {
         cell.classList.remove("sky")
         cell.classList.add("leaves")
-
 
     }
 }
@@ -48,6 +78,7 @@ function getGrass(cell, i) {
         cell.classList.add("grass")
     }
 }
+
 function getDirt(cell, i) {
     if (i > 15) {
         cell.classList.remove("sky");
