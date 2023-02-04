@@ -14,6 +14,8 @@ export function createBoard() {
         }
     }
 }
+
+// build the big man
 function renderStone(cell, i, j) {
     if ((i < 15 && i > 1 && j > 4 && j < 6) || (i < 2 && i > 0 && j > 4 && j < 15) || (i < 15 && i > 1 && j < 15 && j > 13)) {
         cell.classList.remove("sky");
@@ -55,7 +57,6 @@ function renderStone(cell, i, j) {
 
 
 }
-
 
 function buildTree(cell, i, j) {
     if ((i < 15 && i > 10 && j > 16 && j < 18) || (i < 15 && i > 10 && j > 1 && j < 3)) {

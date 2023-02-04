@@ -208,3 +208,13 @@ background: url("/assest/afterthehead.png")no-repeat center center/cover;
   hsl(55deg 100% 50%) 100%
 );
 }
+@media  (max-width:800px) and (min-width: 100px) {
+.container1{
+  width: 0.7em;
+}
+.buttondes{
+  width: 4rem;
+}
+}
+  
+

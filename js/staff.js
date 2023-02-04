@@ -20,12 +20,18 @@ const getLeaves = document.querySelector(".currentLeaves")
 const swordaaa = document.querySelector(".containerSword")
 const sword1 = document.querySelector(".sword")
 
+
+//////////////////////////////////
 counterDirt.classList.add("red")
 counterGrass.classList.add("red")
 counterRock.classList.add("red")
 counterSnow.classList.add("red")
 counterTrunk.classList.add("red")
 counterLeaves.classList.add("red")
+//////////////////////////////////
+
+
+
 function restartGame() {
     location.href = "./index.html";
 }
@@ -47,30 +53,6 @@ function restartBlurColor() {
 }
 
 let counter = 0
-class allTheStaff {
-    constructor(axe, pickaxe, shovel) {
-        this.axe = axe;
-        this.pickaxe = pickaxe;
-        this.shovel = shovel;
-    }
-}
-
-const types = [{
-    grass: "grass",
-    leaves: "leaves",
-    dirt: "dirt",
-    rock: "rock",
-    snow: "snow",
-    tree: "tree",
-    trunk: "trunk"
-}];
-
-const toolTypes = {
-    pickaxe: [types.rock],
-    shovel: [types.dirt, types.grass],
-    axe: [types.trunk]
-};
-
 
 let counterRock1 = 0;
 let counterDirt2 = 0;
@@ -238,7 +220,6 @@ getTrunk.addEventListener("click", () => {
 
 getRock.addEventListener("click", () => {
     swordaaa.classList.remove("blue")
-
     counterDirt.classList.remove("green")
     counterGrass.classList.remove("green")
     counterRock.classList.add("green")
