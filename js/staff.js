@@ -94,8 +94,6 @@ buildBoard.addEventListener("click", (e) => {
         }
     }
     if (axe.classList.contains("blue")) {
-        // restartColors()
-
         if (target.classList.contains("leaves")) {
             counterLeaves4++;
             counterLeaves.innerHTML = counterLeaves4;
@@ -160,6 +158,7 @@ buildBoard.addEventListener("click", (e) => {
     }
 
 });
+
 swordaaa.addEventListener("click", (e) => {
     swordaaa.classList.add("blue")
     restartBlurColor()
