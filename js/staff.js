@@ -96,12 +96,13 @@ buildBoard.addEventListener("click", (e) => {
         target.classList = "";
     }
 
-    for (const blockName in blocks) {
-        const block = blocks[blockName];
+    for (const className in blocks) {
+        const block = blocks[className];
         if (pickaxe.classList.contains("blue")) {
             tools.pickaxe.forEach(blockName => {
                 if (target.classList.contains(blockName)) {
                     const block = blocks[blockName];
+                    console.log(block);
                     block.counter++;
                     block.counterElement.innerHTML = block.counter;
                     target.classList.remove(block.className);
