@@ -1,4 +1,6 @@
 const buildBoard = document.querySelector("#game-board");
+const getButton = document.querySelector(".buttondes")
+
 const matrixSize = 21;
 
 export function createBoard() {
@@ -14,6 +16,12 @@ export function createBoard() {
         }
     }
 }
+
+getButton.addEventListener("click", () => {
+    buildBoard.innerHTML = ""
+    createBoard()
+})
+
 
 // build the big man
 function renderStone(cell, i, j) {
